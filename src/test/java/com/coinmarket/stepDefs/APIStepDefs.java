@@ -129,7 +129,7 @@ public class APIStepDefs {
     @Given("user retrieves ID of first ten coins and prints the details of coins with mineable")
     public void userRetrievesIDOfCoins() {
         try{
-        for (int i = 1; i <= 2000; i++) {
+        for (int i = 1; i <= 10; i++) {
             responseBody=getCurrencyInfo(String.valueOf(i));
             JSONObject jsonObject = (JSONObject) jsonParser.parse(responseBody);
             JSONObject dataJSONObj = (JSONObject) jsonObject.get("data");
